@@ -42,6 +42,7 @@ payload:
   - DOMAIN-SUFFIX,emby.eu.org
   - DOMAIN-SUFFIX,embymv.tk
   - DOMAIN-SUFFIX,emby.ml
+  - DOMAIN-SUFFIX,xmsl.org
   - DOMAIN-SUFFIX,misty.ltd
   - DOMAIN-SUFFIX,atomlantis.cloud
   - DOMAIN-SUFFIX,nijigem.by
