@@ -1,7 +1,8 @@
 # > 12306
 hostname = ad.12306.cn
 
-^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response
+https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
 
 # > AcFun
 hostname = aes.acfun.cn, api-new.app.acfun.cn
@@ -17,7 +18,8 @@ hostname = acs.m.taobao.com
 # > amdc
 hostname = amdc.m.taobao.com
 
-^http:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
+^http:\/\/amdc\.m\.taobao\.com url script-response-body
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
 
 # > 百度
 hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com
