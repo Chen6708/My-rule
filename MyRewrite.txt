@@ -832,9 +832,152 @@ hostname = cdn.cmgadx.com
 ^https?:\/\/cdn\.cmgadx\.com\/sdk\/pool\/m8uTS50pt3DC0Xd6\.json url reject-200
 ^https?:\/\/cdn\.cmgadx\.com\/sdk\/pool\/\w+\.json url reject
 
+# > 掌上生活
+hostname = mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com
+# 开屏广告
+^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject-dict
+# 设置栏目内广告
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
+
+# > 中国银行
+hostname = mbs.boc.cn, mlife.jf365.boc.cn
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg url reject-200
+# > 中国银行 缤纷生活
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
+
+# > 中信银行
+hostname = wap.bank.ecitic.com, imcs.citicbank.com
+^https?:\/\/wap.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA url reject-200
+# 开屏广告
+^https:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) url reject-dict
+
+# > 中国移动
+hostname = client.app.coc.10086.cn, h.client.app.coc.10086.cn
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
+# 多个悬浮窗
+^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket url reject
+
+# > 中国移动 江苏
+hostname = wap.js.10086.cn
+^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v1\/market_content\.page\.queryHasIt url reject-dict
+^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
+
+# > 中国移动 安徽
+hostname = api.ahmobile.cn
+^https?:\/\/api\.ahmobile\.cn:443\/eip\?eip_serv_id=app\.getAllNew url reject
+
+# > 中国移动 广东
+hostname = gd.10086.cn
+^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 url reject
+
+# > 中国移动 广西
+hostname = gx.10086.cn
+^https?:\/\/gx\.10086\.cn\/zt-portal\/gxhzg\/portal\/app\/api\/v url reject
+
+# > 中国移动 山东
+hostname = m.sd.10086.cn
+https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url reject-dict
+
+# > 中国移动云盘
+hostname = mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com
+^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/IAdvert url reject-200
+^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/v\d\/getAdverts url reject-200
+^https?:\/\/middle\.yun\.139\.com\/openapi\/cardConfig\/queryCardInfoV3 url reject-200
+^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos url reject-dict
+^https:\/\/mrp\.mcloud\.139\.com\/mc\/mc-client-service\/openapi\/letter\/query url reject-dict
+
+# > 中国联通
+hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject-200
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) url reject-img
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm url reject-dict
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) url reject-img
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) url reject-img
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} url reject-img
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= url reject-img
+
+# > 中国电信
+hostname = cloud.189.cn, zt-app.go189.cn
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation url reject-img
+
+# > 中国广电
+hostname = app.10099.com.cn
+^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage url reject-200
+
+# > 中国天气网小程序
+hostname = e.weather.com.cn
+# 横幅广告
+^https:\/\/e\.weather\.com\.cn\/weChat\/typhoonNull\.json url reject-dict
+
+# > 中国知网
+hostname = xyz.cnki.net
+^https?:\/\/xyz\.cnki\.net\/resourcev7\/api\/manualpush\/SlidsList$ url reject-200
+
+# > 中通快递
+hostname = hdgateway.zto.com
+# 微信小程序净化
+^https:\/\/hdgateway\.zto\.com\/getApolloConfig url reject-dict
+^https:\/\/hdgateway\.zto\.com\/track url reject-dict
+^https:\/\/hdgateway\.zto\.com\/getAdInfo url reject-dict
+^https:\/\/hdgateway\.zto\.com\/listJumperShow url reject-dict
+
+# > 中银跨境GO
+hostname = openapi.boc.cn
+# 开屏广告 首页弹窗 如开启可自行添加主机名
+^https?:\/\/openapi\.boc\.cn\/unlogin\/app\/cbsp\/query_ad_list url reject-200
 
 
+# > 知乎
+hostname = api.zhihu.com, www.zhihu.com, appcloud2.zhihu.com, m-cloud.zhihu.com, zhuanlan.zhihu.com
+# 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
+^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/api\.zhihu\.com\/commercial_api\/(banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) url reject-dict
+^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings url reject-dict
+^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) url reject-dict
+^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/recommend(_v2)?) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/api\.zhihu\.com\/root\/window url reject-dict
+^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+# 我的页面 项目列表,会员卡片,更多卡片
+^https:\/\/api\.zhihu\.com\/me\/guides url reject-dict
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card url reject
+^https:\/\/www\.zhihu\.com\/appview\/v2\/zhmore url reject
+# 搜索页 关键词,猜你想搜
+^https:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading url reject-dict
+^https:\/\/api\.zhihu\.com\/search\/preset_words url reject-dict
+^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? url response-body "recommend_queries":\{.+\} response-body "recommend_queries":{}
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(answer|article)\/\d+ url reject-dict
+# 回答详情页,评论区顶部,下一个回答
+^https:\/\/api\.zhihu\.com\/comment_v5\/answers\/\d+\/list-headers url reject-dict
+^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+\/(feeds|answers)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation url reject-dict
+^https:\/\/www\.zhihu\.com\/api\/v4\/(answers|articles)\/\d+\/recommendations? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+# 其他,服务器推送配置
+^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config url reject
+^https:\/\/api\.zhihu\.com\/ad-style-service\/request url reject-dict
+^https:\/\/appcloud2\.zhihu\.com\/v3\/config url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp url reject-dict
+^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+# 网页版去广告
+^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? url reject-dict
+^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation url reject
+^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/v2\/linkcards\? url reject
+^https:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject
+^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner url reject
+^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation url reject
 
+# > 掌上道具城
+hostname = djcapp.game.qq.com
+^https:\/\/djcapp\.game\.qq\.com\/daoju\/igw\/main\/\?_service=welink\.ad\.list&_ret_key=result&site_set url reject-200
+
+# > 掌上公交
+hostname = quanguo.mygolbs.com, wx.mygolbs.com
+# 我的横幅广告
+^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet url reject-200
+# 小程序广告
+^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhangshanggongjiao.js
 
 
 
