@@ -2,7 +2,6 @@
 hostname = ad.12306.cn
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
 
-<
 # > AcFun
 hostname = aes.acfun.cn, api-new.app.acfun.cn
 ^https?:\/\/aes\.acfun\.cn\/s\?adzones url reject
