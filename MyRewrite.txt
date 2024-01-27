@@ -1,18 +1,22 @@
 # > 12306
 hostname = ad.12306.cn
+
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
 
 # > AcFun
 hostname = aes.acfun.cn, api-new.app.acfun.cn
+
 ^https?:\/\/aes\.acfun\.cn\/s\?adzones url reject
 ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ url reject
 
 # > alibaba
 hostname = acs.m.taobao.com
+
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
 
 # > amdc
 hostname = amdc.m.taobao.com
+
 ^http:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
 
 # > 百度
