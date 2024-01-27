@@ -1,9 +1,3 @@
-# > 高铁管家
-hostname = cdn.133.cn, jp.rsscc.com, jt.rsscc.com
-
-^http:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict
-^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
-
 # > 12306
 hostname = ad.12306.cn
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
@@ -264,6 +258,11 @@ hostname = *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *
 ^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ url reject
 ^http:\/\/.+\.byteimg\.com\/ad-app-package url reject
 ^http:\/\/.+\.byteimg\.com\/web\.business\.image url reject
+
+# > 高铁管家
+hostname = cdn.133.cn, jp.rsscc.com, jt.rsscc.com
+^http:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict
+^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
 
 # > 高德地图
 hostname = m*.amap.com, optimus-ads.amap.com
