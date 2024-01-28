@@ -1,28 +1,26 @@
-# > 12306
-hostname = ad.12306.cn
+hostname = ad.12306.cn, aes.acfun.cn, api-new.app.acfun.cn, acs.m.taobao.com, amdc.m.taobao.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, dss0.bdstatic.com, tb1.bdstatic.com, tb2..bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn, tiebac.baidu.com, mime.baidu.com, appwk.baidu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, 
 
+# > 12306
+# hostname = ad.12306.cn
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response
 https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
 
 # > AcFun
-hostname = aes.acfun.cn, api-new.app.acfun.cn
-
+# hostname = aes.acfun.cn, api-new.app.acfun.cn
 ^https?:\/\/aes\.acfun\.cn\/s\?adzones url reject
 ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ url reject
 
 # > alibaba
-hostname = acs.m.taobao.com
-
+# hostname = acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
 
 # > amdc
-hostname = amdc.m.taobao.com
-
+# hostname = amdc.m.taobao.com
 ^http:\/\/amdc\.m\.taobao\.com url script-response-body
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
 
 # > 百度
-hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com
+# hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com
 ^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 url reject
 ^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 url reject-img
 ^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ url reject
@@ -43,7 +41,7 @@ hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu
 ^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? url reject
 
 # > 百度地图
-hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2..bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
+# hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2..bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
 ^https:\/\/dss0.bdstatic.com\/-0U0bnSm1A5BphGlnYG\/ url reject-200
 ^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) url reject
 ^https?:\/\/tb1.bdstatic.com\/tb\/cms\/ngmis\/adsense\/*.jpg url reject
@@ -53,7 +51,7 @@ hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2..bdstatic.com, ss0.bdstatic.
 ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js
 
 # > 百度网盘
-hostname = pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn
+# hostname = pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx url reject
 ^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad url reject
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list url reject
@@ -73,21 +71,21 @@ hostname = pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, iss
 ^https?:\/\/rp\.hpplay\.cn\/logouts url reject
 
 # > 百度贴吧
-hostname = tiebac.baidu.com
+# hostname = tiebac.baidu.com
 ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js
 ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
 
 # > 百度翻译
-hostname = mime.baidu.com
+# hostname = mime.baidu.com
 ^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo url reject
 ^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement url reject
 
 # > 百度文库
-hostname = appwk.baidu.com
+# hostname = appwk.baidu.com
 ^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad url reject-200
 
 # > 哔哩哔哩
-hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
+# hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
 # Proto 动态广告,后台播放限制,播放页广告 //app.bilibili.com
 ^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoA.js
 ^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoA.js
