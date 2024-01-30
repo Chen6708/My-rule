@@ -1,5 +1,6 @@
+hostname = m.qianbao.qq.com, cdn.133.cn, jp.rsscc.com, jt.rsscc.com
 # > QQ钱包
-hostname = m.qianbao.qq.com
+# hostname = m.qianbao.qq.com
 ^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible url reject
 
 # > 高铁管家
