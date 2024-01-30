@@ -1,0 +1,8 @@
+# > QQ钱包
+hostname = m.qianbao.qq.com
+^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible url reject
+
+# > 高铁管家
+# hostname = cdn.133.cn, *.rsscc.com
+^http:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict
+^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
