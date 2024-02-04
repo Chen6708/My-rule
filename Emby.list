@@ -47,4 +47,6 @@
 	HOST-KEYWORD,emby.wtf,Emby
 	HOST-KEYWORD,jmsooo,Emby
 	HOST-KEYWORD,odysseyplus,Emby
+  HOST-SUFFIX,bili.bili.rip,Emby
+  HOST-SUFFIX,cdn.bili.rip,Emby
 	
