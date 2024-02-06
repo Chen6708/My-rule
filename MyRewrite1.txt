@@ -1,4 +1,7 @@
-hostname = m.qianbao.qq.com, cdn.133.cn, jp.rsscc.com, jt.rsscc.com
+hostname = m.qianbao.qq.com, cdn.133.cn, jp.rsscc.com, jt.rsscc.com, open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com
+
+
+
 # > QQ钱包
 # hostname = m.qianbao.qq.com
 ^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible url reject
@@ -7,3 +10,14 @@ hostname = m.qianbao.qq.com, cdn.133.cn, jp.rsscc.com, jt.rsscc.com
 # hostname = cdn.133.cn, *.rsscc.com
 ^http:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
+
+# > 七猫小说
+# hostname = open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com
+# 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
+^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ url reject
+^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads url reject
+^https:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad url reject
+^https:\/\/dsp\-x\.jd\.com\/adx\/sdk url reject
+^https:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) url reject
+^https:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo url reject
+^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad url reject
