@@ -511,11 +511,6 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 ;^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/shunfeng/shunfeng.js
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject-dict
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen url reject
-# 感谢【怎么肥事】分享
-^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SF.snippet
-^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-video\/video\/app\/video\/labelClusterList url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SF.snippet
-^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/bms\/queryRecommend url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SF.snippet
-^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SF.snippet
 
 # > 顺丰快递小程序
 # hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
