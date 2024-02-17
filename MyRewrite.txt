@@ -3,7 +3,7 @@ hostname = ad.12306.cn, mobile.12306.cn, acs.m.taobao.com, amdc.m.taobao.com, ww
 # > 12306
 # hostname = ad.12306.cn, mobile.12306.cn
 ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ url script-analyze-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
-^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
+#^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 
 # > AcFun
 # hostname = aes.acfun.cn, api-new.app.acfun.cn
