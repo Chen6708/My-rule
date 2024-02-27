@@ -814,9 +814,9 @@ https://ci.xiaohongshu.com/system_config/watermark url reject-img
 
 # > 中国银行
 # hostname = mbs.boc.cn, mlife.jf365.boc.cn
-#^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg url reject-200
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg url reject-200
 # > 中国银行 缤纷生活
-#^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
 
 # > 中信银行
 # hostname = wap.bank.ecitic.com, imcs.citicbank.com
@@ -882,7 +882,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # > 中银跨境GO
 # hostname = openapi.boc.cn
 # 开屏广告 首页弹窗 如开启可自行添加主机名
-#^https?:\/\/openapi\.boc\.cn\/unlogin\/app\/cbsp\/query_ad_list url reject-200
+^https?:\/\/openapi\.boc\.cn\/unlogin\/app\/cbsp\/query_ad_list url reject-200
 
 
 # > 知乎
